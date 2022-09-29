@@ -1,0 +1,11 @@
+name: GraphQL API
+schema:
+  - https://lgonnzutejauqwnexlge.supabase.co/graphql/v1:
+      headers:
+        apiKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxnb25uenV0ZWphdXF3bmV4bGdlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjQyNTg3NzIsImV4cCI6MTk3OTgzNDc3Mn0.gMckEYd-VAXMHeupDZzth3TV3ErhgTxuxDnZKAR0PLk"
+documents: ./src/**/*.graphql.ts
+generates:
+  ./src/graphql-types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
